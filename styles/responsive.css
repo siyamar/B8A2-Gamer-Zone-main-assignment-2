@@ -1,0 +1,62 @@
+/* responsive for tablet */
+@media screen and (max-width: 770px){
+    
+    .footer-policy,
+    .footer-icon,
+    .footer-option,
+    nav{
+        flex-direction: column;
+    }
+    .logo-container{
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .banner-container{
+        flex-direction: column-reverse;
+    }
+    .banner-container .banner-img{
+        width: 100%;
+    }
+    .banner-container .banner-text{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 100%;
+        padding-left: 50px;
+    }
+   .funny-videos-container .funny-videos-img{
+        grid-template-columns: 1fr 1fr;
+       }
+       .play-instantly .play-instantly-text{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .play-instantly-img .plat-instantly-img .main-img img{
+        min-height: 500px;
+        width: 100%;
+    }
+    .play-instantly .play-instantly-img .second-img{
+        width: 150px;
+        top: 70%;
+    }
+    .footer-option{
+
+    }
+
+  
+}
+
+@media screen and (max-width: 576px){
+    .play-instantly,
+    .nav-item-container{
+        flex-direction: column;
+    }
+    .nav-item-container a{
+       margin-bottom: 20px;
+    }
+   .funny-videos-container .funny-videos-img{
+    grid-template-columns: 1fr;
+   }
+   
+}
+
+

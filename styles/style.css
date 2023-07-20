@@ -1,41 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 /* shared styles */
-body{
-    max-width: auto;
-    font-family: 'Work Sans', sans-serif;
-    border: 1px solid red;
+*{
+    box-sizing: border-box;
+    margin: 0;
 }
-.btn-primary{
-    padding: 20px 40px;
-    color: #FFF;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 48px;
-    background-color: #F948B2;
-    border: 0;
-    cursor: pointer;
+body{
+    font-family: 'Work Sans', sans-serif;
 }
 
-/* nav section styles  start*/
-nav{
+/* nav start */
+
+.nav-container{
     max-width: 1400px;
     min-height: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 100px;
+    margin: 0 auto;
 }
 .logo-container{
     display: flex;
     align-items: center;
-   
 }
 .logo-container img{
     width: 80px;
@@ -54,6 +40,7 @@ nav{
 .nav-item-container{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .nav-item-container a{
     text-decoration: none;
@@ -70,16 +57,14 @@ nav{
 .fa-brands{
     margin-left: 10px;
 }
-/* nav section styles end */
+/* nav end */
 
-
-/* banner section styles start */
+/* banner section start */
 .banner-container{
     max-width: 1400px;
+    margin: 50px auto 0;
+    min-height: 50px;
     display: flex;
-    justify-content: space-between;
-    margin: 0px 100px ;
-
 }
 .banner-text{
     width: 50%;
@@ -87,16 +72,19 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+ 
 }
 .banner-title{
     color: #0B0223;
     font-size: 48px;
     font-weight: 600;
     text-transform: uppercase;
+    margin-bottom: 0;
 }
 .banner-goat{
     font-size: 95px;
+    margin-top: 0;
+    margin-bottom: 0;
     font-weight: 800;
     text-transform: uppercase;
     background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
@@ -105,42 +93,54 @@ nav{
     -webkit-text-fill-color: transparent;
 }
 
-.banner-text p{
+.banner-description {
     color: #534C64;
     font-size: 20px;
     font-weight: 500;
-    margin-top: 17px;
+    margin-top: 24px;
 }
-
-.banner-img{
-    width: 50%;
+.banner-description p{
+    margin-bottom: 0px;
 }
-.banner-img img{
-    width: 100%;
-}
-
 .banner-btn{
     margin-top: 40px;
     display: flex;
+    gap: 10px;
+}
+.btn-primary{
+    padding: 3% 5%;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 48px;
+    background-color: #F948B2;
+    border: 0;
+    cursor: pointer;
 }
 .btn-secondary{
-    padding: 20px 40px;
+    padding: 3% 5%;
     color: #FFF;
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 48px;
     background: #4EC5F7;
-    margin-left: 10px;
     border: 0;
     cursor: pointer;
 }
-/* banner section styles end */
+.banner-img{
+    width: 50%;
+}
+.banner-img img{
+    width: 100%;
+}
+/* banner section end */
 
-/* funny videos section styles start */
+/* funny videos section start */
 .funny-videos-container{
     max-width: 1400px;
-    margin: 100px 100px 0;
+    margin: 100px auto 0;
 }
 .funny-videos-text{
     display: flex;
@@ -152,6 +152,7 @@ nav{
     color: #0B0223;
     font-size: 48px;
     font-weight: 700;
+    margin: 16px 0;
 }
 .funny-videos-title span{
     background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
@@ -163,33 +164,30 @@ nav{
     color: #534C64;
     font-size: 18px;
     font-weight: 400;
+    margin: 0;
 }
-
 .funny-videos-img{
     margin-top: 45px;
-    min-height: 340px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-
 }
 .funny-videos-img img{
     width: 100%;
-    margin-bottom: 20px;
 }
 .funny-videos-img .online-games .description{
     color: #534C64;
     font-size: 20px;
     font-weight: 500;
 }
-/* funny videos section styles end */
+/* funny videos section end */
 
 /* play instantly section styles start */
 .play-instantly{
     max-width: 1400px;
     display: flex;
     justify-content: space-between;
-    margin: 100px 100px 0;
+    margin: 100px auto 0;
 }
 .play-instantly-text{
     display: flex;
@@ -197,11 +195,13 @@ nav{
     justify-content: center;
     align-items: end;
     width: 40%;
+    margin-right: 30px;
 }
 .play-instantly-text .title{
     text-align: right;
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .play-instantly-text .description{
@@ -223,13 +223,11 @@ nav{
 
 .play-instantly-img{
     position: relative;
-    /* width: 60%; */
+    width: 60%;
 }
 .play-instantly-img .main-img img{
     min-height: 500px;
     width: 70%;
-    /* display: flex;
-    justify-content: end; */
 }
 .play-instantly-img .main-img{
     display: flex;
@@ -237,9 +235,9 @@ nav{
 }
 .play-instantly-img .second-img{
     position: absolute;
-    width: 250px;
+    width: 270px;
     top: 55%;
-    left: 10%;
+    left: 17%;
 }
 /* play instantly section styles end */
 
@@ -247,15 +245,13 @@ nav{
 .games-btn-container{
     background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
     max-width: 1400px;
-    margin: 120px auto 0;
+    margin: 50px auto 0;
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     min-height: 400px;
-
-
 }
 .games-single-btn{
     display: flex;
@@ -264,14 +260,23 @@ nav{
     padding: 16px 10px;
     border-radius: 50px;
     background: #FFF;
+    border: 1px solid #fff;
+}
+.games-single-btn:hover{
+    border: 1px solid #F948B2;
 }
 .games-single-btn a{
     text-decoration: none;
-    margin-left: 10px;
+    color: #0B0223;
+    font-size: 20px;
+    font-weight: 600;
+}
+.games-single-btn:hover a{
+    color: #F948B2;
 }
 /* Games btn section styles end */
 
-/* footer section styles star */
+/* footer section styles start */
 footer{
     min-height: 500px;
     background-color: #0B0223;
@@ -284,8 +289,12 @@ footer{
     display: flex;
     gap: 20px;
     justify-content: center;
+    align-items: center;
     margin-bottom: 50px;
     padding-top: 120px;
+}
+.footer-title img{
+    width: 6%;
 }
 .footer-title-text{
     color: #fff;
@@ -364,4 +373,3 @@ footer{
     padding-bottom: 120px;
 }
 /* footer section styles end */
-
